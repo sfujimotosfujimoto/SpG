@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.sfujimoto"/>
+
+    <bean id="greetingController" class="com.sfujimoto.controllers.GreetingController">
+        <property name="helloWorldService" ref="helloWorldServiceDefault"/>
+
+    </bean>
+
+    <beans profile="english">
+        <bean id="helloWorldServiceDefault" class="com.sfujimoto.services.HelloWorldServiceEnglishImpl"/>
+    </beans>
+
+    <beans profile="spanish">
+         <bean id="helloWorldServiceDefault" class="com.sfujimoto.services.HelloWorldServiceSpanishImpl"/>
+    </beans>
+
+
+
+
+</beans>

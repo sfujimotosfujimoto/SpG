@@ -4,5 +4,5 @@ package com.sfujimoto.services;
 
 public interface HelloWorldService {
 
-    public String getGreeting();
+    String getGreeting();
 }

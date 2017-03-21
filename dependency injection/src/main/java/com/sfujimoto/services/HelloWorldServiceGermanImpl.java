@@ -3,10 +3,10 @@ package com.sfujimoto.services;
 
 
 
-public class HelloWorldServiceEnglishImpl implements HelloWorldService {
+public class HelloWorldServiceGermanImpl implements HelloWorldService {
 
     @Override
     public String getGreeting() {
-        return "Hello world!!!";
+        return "Allgemeinen Bestimmungen";
     }
 }
